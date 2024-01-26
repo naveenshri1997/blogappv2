@@ -21,7 +21,7 @@ const ShowPost = () => {
     }, [])
 
     const getpost = () => {
-        fetch('http://localhost:5000/showpost', {
+        fetch('https://blogv2server.onrender.com/showpost', {
             method: 'GET',
         }).then((getpost) => getpost.json()).then((data) => {
             setpost(data.data);
@@ -29,7 +29,7 @@ const ShowPost = () => {
     }
 
     const deletepost = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deletepost/${_id}`, {
+        const res = await fetch(`https://blogv2server.onrender.com/deletepost/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -63,7 +63,7 @@ const ShowPost = () => {
         {
             name: "Post Image",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://blogv2server.onrender.com/${row.image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
