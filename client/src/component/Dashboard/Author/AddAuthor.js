@@ -35,7 +35,7 @@ const AddPost = () => {
 
         console.log("add", formData);
 
-        const res = await fetch('http://localhost:5000/addauthor', {
+        const res = await fetch('https://blogv2server.onrender.com/addauthor', {
             method: 'POST',                                
               body: formData,
         });
