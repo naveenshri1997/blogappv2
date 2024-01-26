@@ -14,7 +14,7 @@ const ScrollCategory = () => {
 },[])
 
 const showpost_auth = async () => {
-  const res = await fetch('http://localhost:5000/showpost_auth', {
+  const res = await fetch('https://blogv2server.onrender.com/showpost_auth', {
       method: 'GET',
   })
   const result = await res.json();
