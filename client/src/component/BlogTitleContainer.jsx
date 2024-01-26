@@ -3,7 +3,7 @@ import bai from '../bai.jpg'
 // import blogimgcom from '../blog1.png'
 import { Link } from 'react-router-dom'
 const BlogTitleContainer = ({blogs}) => {
-    const url = "http://localhost:5000";
+    const url = "https://blogv2server.onrender.com";
     // {`http://localhost:5000/${row.image.slice(14)}`} 
     return (
         <>  
