@@ -28,13 +28,13 @@ export const SingleBlog = () => {
             <div className='Single_blog_container'>
             <div className='blog_detail'>
                     <div className='bdp1'>
-                          {blog.map((data)=>{      
-                        return(
+{/*                           {blog.map((data)=>{      
+                        return( */}
                         <h2 className='blog_title text-start fs-1'>{data.post_title}</h2>
                         {/* <h3 className='blog_para text-start hev'>By Mary Moore, copywriter at Shakuro The ever-shifting
                             landscape of digital innovation</h3> */}
-                                )
-                                })}
+{/*                                 )
+                                })} */}
                     </div>                
                 </div>
 
