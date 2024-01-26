@@ -9,7 +9,7 @@ export const SingleBlog = () => {
     const { id } = useParams();
     const [blog, setblog] = useState([]);
     useEffect(() => {
-        const res = fetch(`http://localhost:5000/showonepost/${id}`, {
+        const res = fetch(`https://blogv2server.onrender.com/showonepost/${id}`, {
             method: 'GET',
         }).then((res) => res.json()).then((data) => {
             setblog(data.data);        
