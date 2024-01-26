@@ -18,8 +18,8 @@ export const SingleBlog = () => {
     console.log(blog);
     const url = "https://blogv2server.onrender.com";
 
-      return (
-    <>        
+     return (
+    <>
     <Header/>
     <section>
         <div className="container">
@@ -28,36 +28,42 @@ export const SingleBlog = () => {
             <div className='Single_blog_container'>
             <div className='blog_detail'>
                     <div className='bdp1'>
-{/*                           {blog.map((data)=>{      
-                        return( */}
-                        <h2 className='blog_title text-start fs-1'>{data.post_title}</h2>
+                        {
+                            blog.map((data) =>{
+                                return(
+                                    <h2 className='blog_title text-start fs-1'>{data.post_title}</h2>
+                                )
+                            }
+                        )}
                         {/* <h3 className='blog_para text-start hev'>By Mary Moore, copywriter at Shakuro The ever-shifting
                             landscape of digital innovation</h3> */}
-{/*                                 )
-                                })} */}
                     </div>                
                 </div>
 
                 <div className='author'>
-                    {/* <div className="author_img"><img src={`${url}/${blog[0].author_id[0].author_image.slice(14)}`} alt="bai" className='img-fluid' /></div> */}
-                    {/* <div className="author_title hev">{filterblog.author[0].name}</div>
-                    <div className="author_date hev">{`${filterblog.author[0].time?filterblog.author[0].time.slice(0,10):''}`}</div>                             */}
+                {
+                            blog.map((data) =>{
+                                return(
+                                    <>    
+                    <div className="author_img"><img src={`${url}/${data.author_id.author_image.slice(14)}`} alt="bai" className='img-fluid' /></div>
+                     <div className="author_title hev">{data.author_id.name}</div>
+                    <div className="author_date hev">{`${data.author_id.time?data.author_id.time.slice(0,10):''}`}</div>                            
+                    </>
+                    )
+                })}
                 </div>                               
                 
                  <div className="bdp2">
-                        <img src={blogimgcom} className='img-fluid' width="100%" alt="" />
-
-                    <h4 className='fs-5 fw-normal mt-5 text-center'>The performance of large language models (LLMs) is growing at a breakneck pace.
-                         Models provide more coherent and consistent answers, with a progressive and
-                          significant reduction of hallucinations. This improvement is mainly related
-                           to the overall optimization of model architecture and training data, as well
-                            as the constant increase in parameters. Nonetheless, hallucinations are 
-                            still occurring, sometimes in unexpected ways, and it is still a significant 
-                            challenge to trace the source of these anomalies. Our understanding of
-                             the inner workings of LLMs is less detailed than what one could assume 
-                             when looking at their widespread application, and this is a considerable
-                              limit in specific domains where random and unexpected errors could lead 
-                              to severe consequences (e.g., healthcare and finance)</h4>
+                { blog.map((data) =>{
+                                return(
+                                    <>
+                    <img src={`${url}/${data.image.slice(14)}`} className='img-fluid' width="100%" alt="" />
+                    <h4 className='fs-5 fw-normal mt-5 text-center'>
+                        {data.post_para}
+                    </h4>
+                    </>
+                    )
+                    })}
                     </div>
             </div>                
             </div>
