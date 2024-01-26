@@ -21,7 +21,7 @@ const ShowAuthor = () => {
     }, [])
 
     const getauthor = () => {
-        fetch('http://localhost:5000/showauthor', {
+        fetch('https://blogv2server.onrender.com/showauthor', {
             method: 'GET',
         }).then((getauthor) => getauthor.json()).then((data) => {
             setauthor(data.data);
@@ -29,7 +29,7 @@ const ShowAuthor = () => {
     }
 
     const deleteauthor = async (_id) => {
-        const res = await fetch(`http://localhost:5000/deleteauthor/${_id}`, {
+        const res = await fetch(`https://blogv2server.onrender.com/deleteauthor/${_id}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -55,7 +55,7 @@ const ShowAuthor = () => {
         {
             name: "Author Image",
             selector: (row) => <>
-                <iframe src={`http://localhost:5000/${row.author_image.slice(14)}`} width="100%" height="150px" />                                               
+                <iframe src={`https://blogv2server.onrender.com/${row.author_image.slice(14)}`} width="100%" height="150px" />                                               
             </>
         },
         {
