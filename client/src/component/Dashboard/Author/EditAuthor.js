@@ -24,7 +24,7 @@ const EditAuthor = () => {
     }, [])
 
     const getoneauthor = async () => {
-        const res = await fetch(`http://localhost:5000/showoneauthor/${id}`);
+        const res = await fetch(`https://blogv2server.onrender.com/showoneauthor/${id}`);
         const data = await res.json();
         console.log('dta', data);
         setname(data.data.name);
@@ -36,7 +36,7 @@ const EditAuthor = () => {
         formData.append('name', name);
         formData.append('author_image', author_image);
 
-        const res = await fetch(`http://localhost:5000/updateauthor/${id}`, {           
+        const res = await fetch(`https://blogv2server.onrender.com/updateauthor/${id}`, {           
             method: "PUT",
             body: formData
         });
