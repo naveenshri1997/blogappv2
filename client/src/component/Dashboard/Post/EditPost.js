@@ -26,7 +26,7 @@ const EditPost = () => {
     }, [])
 
     const getonepost = async () => {
-        const res = await fetch(`http://localhost:5000/showonepost/${id}`);
+        const res = await fetch(`https://blogv2server.onrender.com/showonepost/${id}`);
         const data = await res.json();
         console.log('dta', data);
         setpost_title(data.data.post_title);
@@ -43,7 +43,7 @@ const EditPost = () => {
         formData.append('category',category);
         formData.append('image', image);
 
-        const res = await fetch(`http://localhost:5000/updatepost/${id}`, {           
+        const res = await fetch(`https://blogv2server.onrender.com/updatepost/${id}`, {           
             method: "PUT",
             body: formData
         });
@@ -99,7 +99,7 @@ const EditPost = () => {
                                             <label className="col-sm-3 col-form-label">Upload Files</label>
                                             <div className="col-sm-9">
                                                 <input type="file" defaultValue={image} className="form-control" onChange={(e) => setimage(e.target.files[0])} />
-                                                <iframe src={`http://localhost:5000/${image.slice(14)}`} width="100%" height="150px" />
+                                                <iframe src={`https://blogv2server.onrender.com/${image.slice(14)}`} width="100%" height="150px" />
                                             </div>
                                         </div>
                                         <div className="mb-3 row">
