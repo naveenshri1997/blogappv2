@@ -16,7 +16,7 @@ require('./db/conn');
 app.use(cors());
 app.use(
     cors({
-      origin: "https://localhost:3000/",
+      origin: "https://blogv2client.onrender.com",
     })
 );
 
