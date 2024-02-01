@@ -2,7 +2,7 @@ import {createContext, useContext, useEffect, useReducer } from 'react';
 import reducer from "../reducer/postReducer";
 const AppContext = createContext()
 
-const API = 'http://localhost:5000/showpost_auth';
+const API = 'https://blogv2server.onrender.com/showpost_auth';
 const initialState = {
     isLoading:false,
     isError:false,
