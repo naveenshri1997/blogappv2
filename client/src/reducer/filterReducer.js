@@ -31,7 +31,7 @@ const filterReducer= (state,action)=>{
                 })
             }
 
-            if(category){
+            if(category !=='Trending'){
                 tempFilterPost = tempFilterPost.filter((curElm)=> 
                 { 
                     return curElm.category===category;
