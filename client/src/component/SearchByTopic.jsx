@@ -9,7 +9,7 @@ const getUniqueData =(data,property) =>{
   let newVal = data.map((curElem)=>{
       return curElem[property];
   })
-  return (newVal = ['All',...new Set(newVal)]);
+  return (newVal = ['Trending',...new Set(newVal)]);
   console.log(newVal);
 }
 const categoryonlydata = getUniqueData(all_posts,"category");
